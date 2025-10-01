@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Catálogo — Séries e Filmes</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Catálogo — Séries & Filmes</h1>
+    <div class="controls">
+      <input id="search" placeholder="Pesquisar título, ano ou gênero..." />
+      <select id="typeFilter">
+        <option value="all">Todos</option>
+        <option value="movie">Filmes</option>
+        <option value="series">Séries</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section id="list" class="grid"></section>
+    <template id="cardTemplate">
+      <article class="card">
+        <img class="poster" src="" alt="Poster" />
+        <div class="card-body">
+          <h2 class="title"></h2>
+          <p class="meta"></p>
+          <p class="summary"></p>
+          <div class="actions">
+            <button class="btn-more">Ver detalhes</button>
+            <a class="btn-trailer" target="_blank">Trailer</a>
+          </div>
+        </div>
+      </article>
+    </template>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeModal" class="close">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="foot">Dados de exemplo — personalize <code>data/movies.json</code></footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
